@@ -23,12 +23,13 @@ function generatePassword(){
     for(let i = 0, n = charset.length; i < sliderElement.value; ++i){
         pass += charset.charAt(Math.floor(Math.random() * n));
     }
-    containerPassword.classList.remove("hide");
-    password.innerHTML = pass;
-    novaSenha = pass;
+    console.log(pass)
+  containerPassword.classList.remove("hide");
+  password.innerHTML = pass;
+  novaSenha = pass;
 }
 
 function copyPassword(){
-    alert("Senha copiada com sucesso!");
-    navigator.clipboard.writeText(novaSenha);
+  alert("Senha copiada com sucesso!")
+  navigator.clipboard.writeText(novaSenha);
 }
